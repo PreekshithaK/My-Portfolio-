@@ -145,7 +145,7 @@
         .hero-buttons {
             display: flex;
             gap: 1rem;
-            flex-wrap: wrap; /* Allows buttons to wrap on smaller screens */
+            flex-wrap: wrap;
             animation: fadeUp 1s ease-out 0.4s backwards;
         }
 
@@ -261,7 +261,7 @@
         .card h3 { font-size: 1.5rem; margin-bottom: 1rem; color: #fff; }
         .card p { color: var(--text-muted); margin-bottom: 1.5rem; flex-grow: 1; }
 
-        /* --- Skills Custom Styling (NEW) --- */
+        /* --- Skills Custom Styling --- */
         .skills-list {
             display: flex;
             flex-wrap: wrap;
@@ -288,31 +288,6 @@
             box-shadow: 0 0 15px rgba(14, 165, 233, 0.3);
             transform: translateY(-3px);
         }
-
-        /* --- Built-in Resume Viewer --- */
-        .resume-wrapper {
-            background: var(--surface-color);
-            border-radius: 15px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-            max-width: 1000px;
-            margin: 0 auto;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .resume-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1.2rem 2rem;
-            background: rgba(0, 0, 0, 0.2);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        .resume-header h3 { font-size: 1.2rem; font-weight: 500; }
-        .resume-iframe { width: 100%; height: 800px; border: none; background: #e2e8f0; }
 
         /* --- Education Timeline --- */
         .timeline {
@@ -393,7 +368,7 @@
         /* --- Footer --- */
         footer { text-align: center; padding: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.1); color: var(--text-muted); margin-top: 50px; }
         footer a { transition: color 0.3s ease; }
-        footer a:hover { color: #fff !important; } /* Simple hover effect for footer link */
+        footer a:hover { color: #fff !important; }
 
         /* --- Animations --- */
         @keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
@@ -417,8 +392,6 @@
             .hero h1 { font-size: 2.8rem; }
             .hero-buttons { flex-direction: column; width: 100%; max-width: 300px; margin: 0 auto; }
             .section-padding { padding: 80px 5%; }
-            .resume-header { flex-direction: column; gap: 1rem; text-align: center; }
-            .resume-iframe { height: 500px; }
         }
     </style>
 </head>
@@ -446,28 +419,24 @@
             <div class="hero-buttons">
                 <a href="#projects" class="btn">View My Work</a>
                 <a href="#resume" class="btn btn-outline">View Resume</a> 
-                <a href="https://www.linkedin.com/in/preekshitha-k-94b814336?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="btn btn-outline">LinkedIn</a>
+                <a href="https://www.linkedin.com/in/preekshitha-k-94b814336" target="_blank" class="btn btn-outline">LinkedIn</a>
             </div>
         </div>
         
         <div class="hero-image-wrapper">
             <div class="hero-image">
-                <img src="images\preekshitha.jpeg"alt="My Profile Photo">
+                <img src="images/preekshitha.jpeg" alt="My Profile Photo">
             </div>
         </div>
     </section>
 
-    <section id="resume" class="section-padding">
+   <section id="resume" class="section-padding" style="text-align: center;">
         <h2 class="section-title">My Resume</h2>
-        <div class="resume-wrapper">
-            <div class="resume-header">
-                <h3>Document Viewer</h3>
-                <a href="images\resume.pdf" class="btn btn-outline" style="padding: 0.5rem 1.5rem; font-size: 0.9rem;" download>Download PDF</a>
-            </div>
-            
-            <iframe src="images\resume.pdf" class="resume-iframe" title="Interactive Resume Document">
-                <p>Your browser does not support embedding PDFs. Please <a href="images\resume.pdf">download the PDF</a> to view it.</p>
-            </iframe>
+        <p style="color: var(--text-muted); margin-bottom: 2rem; font-size: 1.1rem;">
+            Interested in my complete professional background and qualifications? Click below to view my resume.
+        </p>
+        <div style="display: flex; justify-content: center;">
+            <a href="images/resume.pdf" target="_blank" class="btn">View Resume</a>
         </div>
     </section>
 
@@ -479,9 +448,8 @@
                 <h3>Frontend Development</h3>
                 <div class="skills-list">
                     <span class="skill-tag">HTML & CSS</span>
-                    <span class="skill-tag">JavaScript </span>
+                    <span class="skill-tag">JavaScript</span>
                     <span class="skill-tag">React.js</span>
-                    
                 </div>
             </div>
 
@@ -492,8 +460,8 @@
                     <span class="skill-tag">Express.js</span>
                     <span class="skill-tag">Python</span>
                     <span class="skill-tag">PHP</span>
+                    <span class="skill-tag">MySQL</span>
                     <span class="skill-tag">MongoDB</span>
-                
                 </div>
             </div>
 
@@ -517,41 +485,40 @@
             <div class="timeline-item">
                 <div class="timeline-content">
                     <h3>SSLC</h3>
-                    <p class="timeline-date">2020  | St.victors</p>
+                    <p class="timeline-date">2020 | St. Victors</p>
                 </div>
             </div>
             <div class="timeline-item">
                 <div class="timeline-content">
                     <h3>PUC</h3>
-                    <p class="timeline-date">2020 - 2022 | Govt pre university College Puttur</p>
+                    <p class="timeline-date">2020 - 2022 | Govt Pre-University College Puttur</p>
                   </div>
             </div>
              <div class="timeline-item">
                 <div class="timeline-content">
                     <h3>BCA</h3>
-                    <p class="timeline-date">2022 - 2025 | Vivekananda Deegre college (autonomus) Puttur</p>
+                    <p class="timeline-date">2022 - 2025 | Vivekananda Degree College (Autonomous) Puttur</p>
                   </div>
                    </div>
                    <div class="timeline-item">
                 <div class="timeline-content">
                     <h3>MCA</h3>
-                    <p class="timeline-date">2025 - Present | St.philomena Puttur</p>
+                    <p class="timeline-date">2025 - Present | St. Philomena Puttur</p>
                   </div>
             </div>
-       
+        </div>
     </section>
 
     <section id="projects" class="section-padding">
         <h2 class="section-title">Selected Projects</h2>
         <div class="grid">
             <div class="card">
-                <h3>Real Estate using web development</h3>
+                <h3>Real Estate Web Development</h3>
                 <p>The Real Estate Management System is a centralized, interactive web application designed to bridge the gap between property buyers, sellers, and real estate agents. The platform digitizes the property search and listing process, providing a user-friendly interface to browse, buy, sell, or rent residential and commercial properties. It streamlines communication, simplifies property management, and offers advanced search capabilities to enhance the user experience.</p>
                 <div class="tags">
-                    <span class="tag">React</span><span class="tag">php</span><span class="tag">Mysql</span>
+                    <span class="tag">React</span><span class="tag">PHP</span><span class="tag">MySQL</span>
                 </div>
             </div>
-          
         </div>
     </section>
 
@@ -563,27 +530,27 @@
                 <h3>IBM</h3>
                 <p class="cert-issuer">IBM</p>
                 <p class="cert-date">Issued: Feb 2026</p>
-                <a href="images\ibmdesign20260206-32-76sfrn.pdf" class="cert-link">View Credential <span>&rarr;</span></a>
+                <a href="images/ibmdesign20260206-32-76sfrn.pdf" target="_blank" class="cert-link">View Credential <span>&rarr;</span></a>
             </div>
             <div class="card cert-card">
                 <div class="cert-icon">✦</div>
-                <h3>Word Press</h3>
-                <p class="cert-issuer">Word press</p>
+                <h3>WordPress</h3>
+                <p class="cert-issuer">WordPress</p>
                 <p class="cert-date">Issued: Jan 2026</p>
-                <a href="images\preekshithaK.pdf"class="cert-link">View Credential <span>&rarr;</span></a>
+                <a href="images/preekshithaK.pdf" target="_blank" class="cert-link">View Credential <span>&rarr;</span></a>
             </div>
              <div class="card cert-card">
                 <div class="cert-icon">✦</div>
-                <h3>NPTL</h3>
-                <p class="cert-issuer">NPTL</p>
-                <p class="cert-date">Issued: MAY 2026</p>
-                <a href="images\preekshithanptl.pdf" class="cert-link">View Credential <span>&rarr;</span></a>
+                <h3>NPTEL</h3>
+                <p class="cert-issuer">NPTEL</p>
+                <p class="cert-date">Issued: May 2026</p>
+                <a href="images/preekshithanptl.pdf" target="_blank" class="cert-link">View Credential <span>&rarr;</span></a>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026. Built with HTML & CSS. | <a href="YOUR_LINKEDIN_URL_HERE" target="_blank" style="color: var(--accent-primary); font-weight: 600;">LinkedIn</a></p>
+        <p> | <a href="https://www.linkedin.com/in/preekshitha-k-94b814336" target="_blank" style="color: var(--accent-primary); font-weight: 600;">LinkedIn</a></p>
     </footer>
 
 </body>
